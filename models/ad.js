@@ -8,7 +8,7 @@ const Ad = db.model("Ad", {
    JobCategory: { type: String, required: true },
    DateNeeded: { type: Date, default: Date.now }, 
    TimeSlot: { type: String, required: true },
-   email:  { type: String, required: true },
+   Email:  { type: String, required: true },
    City:  { type: String, required: true },
    ZipCode:  { type: String, required: true },
 });

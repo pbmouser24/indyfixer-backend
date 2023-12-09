@@ -63,6 +63,7 @@ router.get("/ads/:id", async (req,res) =>{
 
 //added an ad to the database
 router.post("/ads", async(req,res) =>{
+   console.log("Hit",req.body)
    try{
       const ad = await new Ad(req.body)
       await ad.save()
@@ -70,6 +71,7 @@ router.post("/ads", async(req,res) =>{
       console.log(ad)
    }
    catch(err){
+      console.log(err)
       res.status(400).send(err)
 
    }
@@ -107,4 +109,4 @@ router.delete("/ads/:id", async(req,res) =>{
 })
 app.use("/api", router);
 
-app.listen(3000);
+app.listen(3001);
