@@ -2,9 +2,9 @@ const db = require("../db");
 
 // Create a model from the schema
 const Ad = db.model("Ad", {  
-   ServiceRequest: { type: String, required: true },
+   ServiceRequest: { type: String },
    Desc:       { type: String, required: true },
-   DatePosted: { type: Date, default: Date.now },  
+   DatePosted: { type: String, default: Date.now },  
    JobCategory: { type: String, required: true },
    DateNeeded: { type: Date, default: Date.now }, 
    TimeSlot: { type: String },
