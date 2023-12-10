@@ -10,7 +10,7 @@ const Ad = db.model("Ad", {
    TimeSlot: { type: String },
    Email:  { type: String, required: true },
    City:  { type: String, required: true },
-   ZipCode:  { type: String, required: true },
+   ZipCode:  { type: String },
 });
 
 module.exports = Ad;
